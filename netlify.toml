@@ -3,6 +3,7 @@
     command = "npm run build"
 
 [[headers]]
-  for = "https://run-tap-be.netlify.app/*"
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
     [headers.values]
-    Access-Control-Allow-Origin = "https://run-tap.netlify.app/"
+    Access-Control-Allow-Origin = "*"
