@@ -5,3 +5,6 @@
 
 # environment
 .env
+
+# production
+/lambda
