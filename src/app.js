@@ -26,7 +26,7 @@ router.get("/sessionData", (req, res) => {
 
 const domain =
   process.env.ENVIRONMENT == "production"
-    ? "https://run-tap.netlify.app/"
+    ? "https://run-tap.netlify.app"
     : "http://localhost:3000";
 
 app.use(
