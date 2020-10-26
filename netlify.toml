@@ -1,3 +1,8 @@
 [build]
     functions = "lambda"
     command = "npm run build"
+
+[[headers]]
+  for = "https://run-tap-be.netlify.app/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "https://run-tap.netlify.app/"
