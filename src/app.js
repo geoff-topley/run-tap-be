@@ -8,7 +8,7 @@ const app = express();
 const router = express.Router();
 
 router.get("/sessionData", (req, res) => {
-  if (process.env.ENVIRONMENT == "production") {
+  // if (process.env.ENVIRONMENT == "production") {
     const code = req.query.code;
     const client_id = process.env.CLIENT_ID;
     const client_secret = process.env.CLIENT_SECRET;
@@ -19,9 +19,9 @@ router.get("/sessionData", (req, res) => {
       .post(url)
       .then((response) => res.send(JSON.stringify(response.data)))
       .catch((error) => res.send(error));
-  } else {
-    res.json({ msg: "Testing Local Lambda - Success" });
-  }
+  // } else {
+  //   res.json({ msg: "Testing Local Lambda - Success" });
+  // }
 });
 
 const domain =
